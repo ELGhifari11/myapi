@@ -15,9 +15,6 @@ class AppServiceProvider extends ServiceProvider
         $this->app->singleton(PrayerTimeService::class, function($app){
             return new PrayerTimeService(new \GuzzleHttp\Client());
         });
-        
-
-
     }
 
     /**

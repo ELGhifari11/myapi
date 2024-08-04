@@ -23,10 +23,10 @@ class PrayerTimeController extends Controller
     public function prayerTimeToday($ipaddress)
     {
         $ip = Location::get($ipaddress);
-        // dd($ip);
-        $cityName = $ip->cityName;
 
-        $getCityId = $this->prayerTimeService->getCityId($cityName);
+        $GetCityName = $ip->cityName;
+
+        $getCityId = $this->prayerTimeService->getCityId($GetCityName);
         $getDateToday = Carbon::now()->format('Y-m-d');
 
 
@@ -43,9 +43,9 @@ class PrayerTimeController extends Controller
     {
         $ip = Location::get($ipaddress);
         // dd($ip);
-        $cityName = $ip->cityName;
+        $GetCityName = $ip->cityName;
 
-        $getCityId = $this->prayerTimeService->getCityId($cityName);
+        $getCityId = $this->prayerTimeService->getCityId($GetCityName);
         $getYear = Carbon::now()->format('Y');
         // dd($getYear);
         $getMonth = Carbon::now()->format('m');
