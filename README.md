@@ -29,15 +29,15 @@ To use the Prayer Time API, you need to send a GET request to the appropriate en
 
 Retrieve the prayer times for today based on the user's location.
 
-- **URL:** `/prayertime/{ipaddress}/today`
+- **URL:** `/prayertime/{cityName}/today`
 - **Method:** GET
 - **URL Params:**
- - `ipaddress` - The IP address of the user.
+ - `cityName` - The city name of the user.
 
 **Example Request:**
 
 ```http
-GET /api/prayertime/123.456.789.012/today
+GET /api/prayertime/bekasi/today
 ```
 
 ### 🗓️ Get Monthly Prayer Times
@@ -45,7 +45,7 @@ GET /api/prayertime/123.456.789.012/today
 **Example Request:**
 
 ```http
-GET /api/prayertime/123.456.789.012/monthly
+GET /api/prayertime/yogykarta/monthly
 ```
 
 
