@@ -3,7 +3,8 @@
 namespace App\Services;
 
 use GuzzleHttp\Client;
-use Illuminate\Support\Facades\Log;
+// Mengimpor kelas GuzzleHttp\Client untuk digunakan dalam service PrayerTimeService.
+// GuzzleHttp\Client digunakan untuk membuat HTTP requests ke API eksternal.
 
 class PrayerTimeService {
     protected $client;

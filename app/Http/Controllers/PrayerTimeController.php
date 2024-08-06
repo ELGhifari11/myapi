@@ -20,40 +20,39 @@ class PrayerTimeController extends Controller
         $this->prayerTimeService = $prayerTimeService;
 
     }
-    public function prayerTimeToday($ipaddress)
+    public function prayerTimeToday($cityName)
     {
-        $ip = Location::get($ipaddress);
+        // $ip = Location::get($ipaddress);
 
-        $GetCityName = $ip->cityName;
+        // $GetCityName = $ip->cityName;
 
-        $getCityId = $this->prayerTimeService->getCityId($GetCityName);
+        $getCityId = $this->prayerTimeService->getCityId($cityName);
         $getDateToday = Carbon::now()->format('Y-m-d');
 
 
-        if (!$ip && !$getCityId) {
-            return response()->json(['error' => 'IP ADDRESS tidak terdeteksi'], 404);
+        if (!$getCityId) {
+            return response()->json(['error' => 'Nama Kota tidak terdeteksi'], 404);
         }
 
         $getPrayerTimeToday = $this->prayerTimeService->getPrayerTimesToday($getCityId,$getDateToday);
-        dd($getPrayerTimeToday);
         return response()->json($getPrayerTimeToday);
     }
 
-    public function prayerTimeMonthly($ipaddress)
+    public function prayerTimeMonthly($cityName)
     {
-        $ip = Location::get($ipaddress);
+        // $ip = Location::get($ipaddress);
         // dd($ip);
-        $GetCityName = $ip->cityName;
+        // $GetCityName = $ip->cityName;
 
-        $getCityId = $this->prayerTimeService->getCityId($GetCityName);
+        $getCityId = $this->prayerTimeService->getCityId($cityName);
         $getYear = Carbon::now()->format('Y');
         // dd($getYear);
         $getMonth = Carbon::now()->format('m');
         // dd($getMonth);
 
 
-        if (!$ip && !$getCityId) {
-            return response()->json(['error' => 'IP ADDRESS tidak terdeteksi'], 404);
+        if (!$getCityId) {
+            return response()->json(['error' => 'Nama Kota tidak terdeteksi'], 404);
         }
 
         $getPrayerTimeMonthly = $this->prayerTimeService->getPrayerTimesMonthly($getCityId,$getYear,$getMonth);
