@@ -56,9 +56,36 @@ class PrayerTimeController extends Controller
         }
 
         $getPrayerTimeMonthly = $this->prayerTimeService->getPrayerTimesMonthly($getCityId,$getYear,$getMonth);
-        dd($getPrayerTimeMonthly);
+        // dd($getPrayerTimeMonthly);
+
+
         return response()->json($getPrayerTimeMonthly);
     }
+
+
+    // public function showPrayerTimes()
+    // {
+    //     $cityName = 'bekasi'; // Ubah sesuai kebutuhan atau ambil dari parameter request
+
+    //     // Mendapatkan data waktu sholat hari ini
+    //     $getCityId = $this->prayerTimeService->getCityId($cityName);
+    //     $getDateToday = Carbon::now()->format('Y-m-d');
+
+    //     if (!$getCityId) {
+    //         return response()->json(['error' => 'Nama Kota tidak terdeteksi'], 404);
+    //     }
+
+    //     $todayData = $this->prayerTimeService->getPrayerTimesToday($getCityId, $getDateToday);
+
+    //     // Mendapatkan data waktu sholat bulanan
+    //     $getYear = Carbon::now()->format('Y');
+    //     $getMonth = Carbon::now()->format('m');
+
+    //     $monthlyData = $this->prayerTimeService->getPrayerTimesMonthly($getCityId, $getYear, $getMonth);
+
+    //     // Mengirimkan data ke view
+    //     return view('beranda',$getYear);
+    // }
 
 
 
