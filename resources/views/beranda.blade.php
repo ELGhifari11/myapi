@@ -128,7 +128,7 @@
             <a href="https://pondokit.com/" target="_blank">
                 <img src="https://img.shields.io/badge/Web-pondokit.com-blue" alt="Website" style="margin: 5px;">
             </a>
-            <a href="https://instagram.com/ELGhifari11" target="_blank">
+            <a href="https://www.instagram.com/el.g.11/" target="_blank">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width: 20px; height: 20px; margin: 5px;">
             </a>
         </div>
