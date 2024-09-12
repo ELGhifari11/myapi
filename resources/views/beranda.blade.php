@@ -189,6 +189,9 @@
                     <a href="#update-todo">📋 Update Todo</a>
                 </li>
                 <li>
+                    <a href="#edit-todo">📋 Edit Todo</a>
+                </li>
+                <li>
                     <a href="#delete-todo">📋 Delete Todo</a>
                 </li>
             </ol>
@@ -409,7 +412,7 @@ Clipboard('https://api.elghifari.site/api/prayertime/yogyakarta/monthly')">Copy<
             </ul>
         </div>
 
-        <div class="section" id="update-todo">
+        <div class="section" id="edit-todo">
             <h2>📋 Edit Todo</h2>
             <ul>
                 <li><strong>URL:</strong> <code>/todos/{id}/edit</code></li>
