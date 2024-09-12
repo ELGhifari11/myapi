@@ -409,6 +409,24 @@ Clipboard('https://api.elghifari.site/api/prayertime/yogyakarta/monthly')">Copy<
             </ul>
         </div>
 
+        <div class="section" id="update-todo">
+            <h2>📋 Edit Todo</h2>
+            <ul>
+                <li><strong>URL:</strong> <code>/todos/{id}/edit</code></li>
+                <li><strong>Method:</strong> GET </li>
+                <li><strong>Deskripsi:</strong> Edit To-Do berdasarkan ID.</li>
+                <li><strong>Request URL:</strong>
+                    <a href="https://api.elghifari.site/api/todos" target="_blank">https://api.elghifari.site/api/todos/{id}/edit</a>
+                    <button class="copy-btn" onclick="copyToClipboard('https://api.elghifari.site/api/todos/id/edit')">Salin</button>
+                </li>
+                <li><strong>Body (JSON):</strong></li>
+                <pre><code>{
+"title": "Judul Edit",
+"description": "Deskripsi Edit",
+ }</code></pre>
+            </ul>
+        </div>
+
         <div class="section" id="delete-todo">
             <h2>📋 Delete Todo</h2>
             <ul>
