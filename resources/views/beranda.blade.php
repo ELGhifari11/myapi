@@ -135,7 +135,7 @@
 
 
         <div class="center">
-            <h1 class="title">🔴 EL API Documentation 🔴</h1>
+            <h1 class="title">🔴 API Documentation 🔴</h1>
             <p class="subtitle">Welcome to EL API Documentation! This Documentation allows you to retrieve All these API. You can search for the API you need here.</p>
         </div>
 
