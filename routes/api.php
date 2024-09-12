@@ -1,8 +1,9 @@
 <?php
 
-use App\Http\Controllers\PrayerTimeController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TodoListController;
+use App\Http\Controllers\PrayerTimeController;
 
 Route::get('/user', function (Request $request) {
     return $request->user();
@@ -11,3 +12,5 @@ Route::get('/user', function (Request $request) {
 Route::get("/prayertime/{cityName}/today", [PrayerTimeController::class, 'prayerTimeToday']);
 
 Route::get("/prayertime/{cityName}/monthly", [PrayerTimeController::class, 'prayerTimeMonthly']);
+
+Route::resource('todos', TodoListController::class);
