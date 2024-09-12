@@ -51,7 +51,10 @@ class TodoListController extends Controller
     public function destroy($id)
     {
         TodoList::destroy($id);
-        return response()->json($id . 'Telah terhapus', 204);
+        return response()->json([
+            'message' => 'Todo dengan ID ' . $id . ' telah terhapus.'
+        ], 200);
     }
+
 }
 
