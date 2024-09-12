@@ -363,12 +363,12 @@ Clipboard('https://api.elghifari.site/api/prayertime/yogyakarta/monthly')">Copy<
             </ul>
 
 
-            <pre><code>{
-            "id": 1,
-            "title": "Belajar Laravel",
-            "description": "Mempelajari framework Laravel untuk pengembangan web.",
+<pre><code>{
+"id": 1,
+"title": "Belajar Laravel",
+"description": "Mempelajari framework Laravel untuk pengembangan web.",
 
-        }</code></pre>
+}</code></pre>
         </div>
 
         <div class="section" id="create-todo">
