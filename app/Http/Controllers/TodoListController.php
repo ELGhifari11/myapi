@@ -8,13 +8,22 @@ use Illuminate\Support\Facades\Log;
 
 class TodoListController extends Controller
 {
-    // Menampilkan semua To-Do
+
+
+    /**
+
+     * @response TodoList[]
+
+     */
     public function index()
     {
         return TodoList::all();
     }
 
-    // Menyimpan To-Do baru
+    /**
+     * Add anew TODO
+     * @response Todo
+     */
     public function store(Request $request)
     {
         $request->validate([
@@ -39,7 +48,6 @@ class TodoListController extends Controller
         $request->validate([
             'title' => 'required|string|max:255',
             'description' => 'nullable|string',
-            'completed' => 'boolean',
         ]);
 
         $todo = TodoList::findOrFail($id);

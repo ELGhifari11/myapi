@@ -20,6 +20,12 @@ class PrayerTimeController extends Controller
         $this->prayerTimeService = $prayerTimeService;
 
     }
+
+     /**
+
+     * @response PrayerTime[]
+
+     */
     public function prayerTimeToday($cityName)
     {
         // $ip = Location::get($ipaddress);
